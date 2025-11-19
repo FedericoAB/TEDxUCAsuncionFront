@@ -1,0 +1,137 @@
+<!-- APP BAR -->
+<header class="appbar">
+  <div class="appbar-inner">
+    <div class="brand">
+      <span class="brand-ted">TED</span><span class="brand-x">x</span>
+      <span class="brand-uc">UC Asunción</span>
+    </div>
+
+    <nav class="nav">
+      <button (click)="scrollTo('que-es')" class="nav-link">
+        ¿Qué es TED<span class="nav-x">x</span>?
+      </button>
+      <button (click)="scrollTo('speakers')" class="nav-link">
+        Disertantes
+      </button>
+      <button (click)="scrollTo('participar')" class="nav-link">
+        Participar
+      </button>
+      <button (click)="scrollTo('organizadores')" class="nav-link">
+        Organizadores
+      </button>
+      <button (click)="toggleLive()" class="nav-link nav-live">
+        Ver en vivo
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <!-- HERO / ¿QUÉ ES TEDx? -->
+  <div class="live-player" *ngIf="showLivePlayer">
+    <div class="live-inner">
+      <button class="live-close" type="button" (click)="toggleLive()">✕</button>
+      <div class="live-frame-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/d0NHOpeczUU"
+          title="TEDx UC Asunción en vivo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <section id="que-es" class="section section-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">TED<span class="hero-x">x</span> UC Asunción</h1>
+
+      <div #heroCarousel class="hero-carousel">
+        <div class="hero-item" *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8]">
+          <!-- cuando tengas imágenes:
+    <img [src]="i.url" [alt]="i.alt" />
+    -->
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <h2>¿Qué es TED<span class="hero-x">x</span>?</h2>
+        <p class="hero-subtitle">
+          <span class="hero-x">x</span> = evento organizado de forma
+          independiente
+        </p>
+
+        <p class="hero-body">
+          TEDx es una iniciativa de base, creada en el espíritu de la misión de
+          TED de descubrir “ideas que vale la pena difundir”. TEDx lleva el
+          espíritu de TED a comunidades locales de todo el mundo mediante
+          eventos organizados de manera independiente bajo una licencia gratuita
+          otorgada por TED. Estos eventos incluyen oradores en vivo,
+          demostraciones y charlas TED grabadas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSICIÓN SUAVE -->
+  <div class="section-transition"></div>
+
+  <!-- DISERTANTES -->
+  <section id="speakers" class="section section-speakers">
+    <div class="section-header">
+      <p class="section-kicker">Primer TEDx universitario del Paraguay</p>
+      <h2>Conocé a las personas detrás de las ideas</h2>
+    </div>
+
+    <div class="speaker-scroller-wrapper">
+      <div class="speaker-scroller">
+        <article class="speaker-card" *ngFor="let s of speakers">
+          <div class="speaker-image-placeholder">
+            <span class="speaker-initial">
+              {{ s.name[0] }}
+            </span>
+          </div>
+          <div class="speaker-info">
+            <h3>{{ s.name }}</h3>
+            <p class="speaker-tag" *ngIf="s.tag">{{ s.tag }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSICIÓN HACIA "PARTICIPAR" (contenido real después) -->
+  <div id="participar" class="section section-participar-placeholder">
+    <div class="section-header">
+      <p class="section-kicker">Muy pronto</p>
+      <h2>Participar en TED<span class="hero-x">x</span> UC Asunción</h2>
+      <p class="hero-body">
+        Esta sección va a detallar cómo ser parte del evento: oradores,
+        voluntariado y audiencia.
+      </p>
+    </div>
+  </div>
+  <section id="organizadores" class="section section-organizers">
+    <div class="section-header">
+      <p class="section-kicker">Equipo</p>
+      <h2>Organizadores de TED<span class="hero-x">x</span> UC Asunción</h2>
+      <p class="hero-body">
+        Un grupo de estudiantes y profesionales que trabaja para traer ideas que
+        valen la pena difundir al campus y a la comunidad.
+      </p>
+    </div>
+
+    <div class="org-grid">
+      <article class="org-card" *ngFor="let o of organizers">
+        <div class="org-avatar-placeholder">
+          <span class="org-initial">{{ o.name[0] }}</span>
+        </div>
+        <div class="org-info">
+          <h3>{{ o.name }}</h3>
+          <p class="org-role">{{ o.role }}</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
