@@ -131,7 +131,7 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
   };
 
   private startCountdown(): void {
-    const target = new Date('2026-10-25T15:00:00-03:00').getTime();
+    const target = new Date('2026-08-01T15:00:00-03:00').getTime();
     const pad = (n: number) => String(Math.max(0, n)).padStart(2, '0');
     const tick = () => {
       const now = Date.now();
