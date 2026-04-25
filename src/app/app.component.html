@@ -1,1 +1,64 @@
-<router-outlet />
+<!-- Fondo global (grid + orbitales) -->
+<div class="field"></div>
+
+<div class="bg-orbitals" aria-hidden="true">
+  <div class="big-ring"></div>
+  <div class="mid-ring"></div>
+  <div class="small-ring"></div>
+  <div class="py-orbit">
+    <img class="p1" src="nanduti.svg" alt="" />
+    <img class="p2" src="nanduti.svg" alt="" />
+    <img class="p3" src="nanduti.svg" alt="" />
+    <img class="p4" src="nanduti.svg" alt="" />
+  </div>
+</div>
+
+<!-- App bar: sólo links a páginas aparte del landing -->
+<nav class="top">
+  <a routerLink="/" class="brand" aria-label="Ir al inicio">
+    <img class="brand-mark" src="nanduti.svg" alt="" />
+    <span>TEDx<i>UC</i> Asunción</span>
+  </a>
+
+  <div class="links">
+    <a routerLink="/about" routerLinkActive="active">Concepto</a>
+    <a routerLink="/oradores" routerLinkActive="active">Oradores</a>
+    <a routerLink="/ver-en-vivo" routerLinkActive="active">Ver en vivo</a>
+    <a routerLink="/sponsors" routerLinkActive="active">Sponsors</a>
+  </div>
+
+  <a routerLink="/ver-en-vivo" class="cta">Ver en vivo</a>
+</nav>
+
+<!-- Contenido de cada ruta -->
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<!-- Footer con la licencia TEDx obligatoria -->
+<footer>
+  <div class="fw">
+    <a routerLink="/" class="logo-s">
+      <img src="nanduti.svg" alt="" />
+      <span>TEDx<span class="x">UC</span> Asunción</span>
+    </a>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <a routerLink="/about">Concepto</a>
+      <a routerLink="/oradores">Oradores</a>
+      <a routerLink="/ver-en-vivo">Ver en vivo</a>
+      <a routerLink="/sponsors">Sponsors</a>
+      <a [href]="tedxProgramLink" target="_blank" rel="noopener">Programa TEDx ↗</a>
+    </nav>
+
+    <div class="social">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+      <a href="mailto:tedxuc@uc.edu.py">Contacto</a>
+    </div>
+
+    <p class="license">This independent TEDx event is operated under license from TED.</p>
+    <div class="copy">© 2026 · TEDxUC Asunción</div>
+  </div>
+</footer>

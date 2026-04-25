@@ -1,0 +1,58 @@
+<header class="sp-hero page-pad">
+  <div class="wrap">
+    <div class="kicker">// sponsors</div>
+    <h1>Quienes hacen <span class="it">posible</span> TEDxUC.</h1>
+    <p class="sub">
+      TEDxUC Asunción se organiza bajo licencia oficial de TED de forma <b>independiente y sin fines de lucro</b>. El apoyo de marcas, universidades y organismos es lo que permite que la primera edición suceda.
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <!-- Placeholder si no hay sponsors aún -->
+    <div class="sponsors-empty" *ngIf="sponsors.length === 0">
+      <img class="mark" src="nanduti.svg" alt="" />
+      <div class="copy">
+        <div class="kicker">próximamente</div>
+        <h3>Estamos conversando con los <span class="it">primeros aliados</span>.</h3>
+        <p>
+          Si tu marca, universidad o medio cree en el espíritu de "ideas worth spreading" y quiere formar parte de la primera edición universitaria del programa TEDx en Paraguay — escribinos.
+        </p>
+        <a href="mailto:tedxuc@uc.edu.py?subject=Interés%20sponsor%20TEDxUC%20Asunción" class="btn primary">
+          Escribir al equipo <span class="arr">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bloques por tier (cuando ya haya sponsors) -->
+    <ng-container *ngIf="sponsors.length > 0">
+      <div class="tier" *ngFor="let t of tiers">
+        <ng-container *ngIf="sponsorsOf(t.id).length > 0">
+          <div class="tier-head">
+            <div class="label">{{ t.label }}</div>
+            <p class="desc">{{ t.desc }}</p>
+          </div>
+          <div class="tier-grid" [class.tier-principal]="t.id === 'principal'">
+            <a *ngFor="let s of sponsorsOf(t.id)"
+               class="sponsor-card"
+               [href]="s.url || '#'"
+               target="_blank"
+               rel="noopener">
+              <div class="logo-slot">{{ s.name }}</div>
+            </a>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</section>
+
+<!-- Nota de branding (guideline oficial) -->
+<section class="branding-note">
+  <div class="wrap">
+    <p class="note">
+      <b>Nota:</b> según las guidelines oficiales de TED, el logo de cualquier sponsor dentro del evento y del sitio es siempre de menor tamaño que el logo del evento TEDx. Los logos nunca aparecen en la homepage; sólo en esta página dedicada.
+    </p>
+  </div>
+</section>

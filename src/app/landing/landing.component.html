@@ -1,33 +1,3 @@
-<div class="field"></div>
-
-<!-- Ñandutí silhouettes orbiting in the background -->
-<div class="bg-orbitals" aria-hidden="true">
-  <div class="big-ring"></div>
-  <div class="mid-ring"></div>
-  <div class="small-ring"></div>
-  <div class="py-orbit">
-    <img class="p1" src="nanduti.svg" alt="" />
-    <img class="p2" src="nanduti.svg" alt="" />
-    <img class="p3" src="nanduti.svg" alt="" />
-    <img class="p4" src="nanduti.svg" alt="" />
-  </div>
-</div>
-
-<!-- NAV -->
-<nav class="top">
-  <div class="brand">
-    <img class="brand-mark" src="nanduti.svg" alt="" />
-    <span>TEDx<i>UC</i> Asunción</span>
-  </div>
-  <div class="links">
-    <a href="#about">Concepto</a>
-    <a href="#speakers">Oradores</a>
-    <a href="#schedule">Programa</a>
-    <a href="#apply">Postulate</a>
-  </div>
-  <a href="#tickets" class="cta">Reservar acceso</a>
-</nav>
-
 <!-- HERO -->
 <header class="hero">
   <div class="corner tl">TEDxUC · ASU<br />1ra edición</div>
@@ -58,48 +28,13 @@
     </p>
 
     <div class="hero-cta">
-      <a href="#tickets" class="btn primary">Reservar acceso <span class="arr">→</span></a>
+      <a href="#reservas" class="btn primary">Reservar acceso <span class="arr">→</span></a>
       <a href="#apply" class="btn ghost">Postular una idea</a>
     </div>
   </div>
 
   <div class="scroll-hint">scroll · explorar periferias</div>
 </header>
-
-<!-- CONCEPTO -->
-<section id="about">
-  <div class="wrap">
-    <div class="s-head">
-      <div class="idx">01 / concepto</div>
-      <div>
-        <h2>Una <span class="it">X</span> que cambia<br />la escala.</h2>
-        <p class="lead">
-          TED es una organización global sin fines de lucro dedicada a las ideas que merecen ser compartidas. La <em>x</em> de TEDx abre ese espíritu a cada ciudad: eventos organizados de forma independiente, bajo licencia oficial, con la misma curaduría y estándares internacionales — adaptados al pulso local.
-        </p>
-      </div>
-    </div>
-
-    <div class="what">
-      <div class="big">
-        <span class="it">TEDxUC Asunción</span> es la primera iniciativa universitaria de este tipo en Paraguay, impulsada por estudiantes de la Universidad Católica para poner ideas paraguayas en conversación con el mundo.
-      </div>
-      <div class="cols">
-        <div class="card">
-          <h4>TED</h4>
-          <p><b>Global.</b> Conferencias breves, curadas, que han superado los 10.000 millones de visualizaciones.</p>
-        </div>
-        <div class="card">
-          <h4>TEDx</h4>
-          <p><b>Local.</b> Eventos organizados de forma independiente bajo licencia oficial, con estándares de curaduría, producción y ética internacionales. Hoy se celebran más de 4.000 TEDx al año en el mundo.</p>
-        </div>
-        <div class="card">
-          <h4>TEDxUC</h4>
-          <p><b>Universitario.</b> La primera edición organizada desde una universidad en Paraguay — un puente entre juventud, academia y cultura.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- META STRIP -->
 <div class="meta">
@@ -109,30 +44,11 @@
   <div class="cell"><div class="n">6h</div><div class="l">15:00 · 21:00</div></div>
 </div>
 
-<!-- COUNTDOWN -->
-<div class="count-band" id="tickets">
-  <div class="count-inner">
-    <div>
-      <div class="count-label">cuenta regresiva · live</div>
-      <div class="count-date">1 <span class="it">ago</span> 2026</div>
-      <div class="count-where">
-        <b>Universidad Católica “Nuestra Señora de la Asunción”</b> · Campus Santa Librada, Asunción — Auditorio Central + Festival de Ideas en patios adyacentes.
-      </div>
-    </div>
-    <div class="clock" aria-live="polite">
-      <div class="cell"><div class="n">{{ days }}</div><div class="l">días</div></div>
-      <div class="cell"><div class="n">{{ hours }}</div><div class="l">horas</div></div>
-      <div class="cell"><div class="n">{{ mins }}</div><div class="l">min</div></div>
-      <div class="cell"><div class="n">{{ secs }}</div><div class="l">seg</div></div>
-    </div>
-  </div>
-</div>
-
 <!-- PERIFERIAS -->
 <section>
   <div class="wrap">
     <div class="s-head">
-      <div class="idx">02 / hilo conductor</div>
+      <div class="idx">01 / hilo conductor</div>
       <div>
         <h2>Cuatro <span class="it">periferias</span>,<br />un mosaico.</h2>
         <p class="lead">La periferia no es un lugar geográfico: es una posición. Desde los márgenes emergen nuevas formas de ver lo común. Estas cuatro dimensiones orientan la curaduría.</p>
@@ -151,40 +67,11 @@
   </div>
 </section>
 
-<!-- SPEAKERS -->
-<section id="speakers">
-  <div class="wrap">
-    <div class="s-head">
-      <div class="idx">03 / oradores</div>
-      <div>
-        <h2>Las <span class="it">voces</span><br />de la primera edición.</h2>
-        <p class="lead">El criterio curatorial es el mismo del formato original: la relevancia está en la idea, no en la trayectoria. Estos son los perfiles que están construyendo sus charlas — nombres e imágenes se anuncian en las próximas semanas.</p>
-      </div>
-    </div>
-
-    <div class="speakers-grid">
-      <div class="sp" *ngFor="let sp of speakers; let i = index">
-        <div class="ph">
-          <div class="idx">// {{ (i + 1).toString().padStart(2, '0') }}</div>
-          <img class="petal" src="nanduti.svg" alt="" />
-          <div class="tag">foto próximamente</div>
-        </div>
-        <div class="body">
-          <div class="line">periferia · {{ sp.line }}</div>
-          <h5>{{ sp.n }}</h5>
-          <div class="role">{{ sp.r }}</div>
-          <div class="topic">{{ sp.t }}</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- SCHEDULE -->
 <section id="schedule">
   <div class="wrap">
     <div class="s-head">
-      <div class="idx">04 / programa · 1 ago 2026</div>
+      <div class="idx">02 / programa · 1 ago 2026</div>
       <div>
         <h2>Un <span class="it">día</span>,<br />seis horas de ideas.</h2>
         <p class="lead">Tres bloques de charlas, dos performances, un festival de ideas abierto al campus. 15:00 a 21:00 — un solo día, un solo escenario central.</p>
@@ -206,25 +93,61 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- RESERVAS -->
+<section id="reservas" class="reservas">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="idx">03 / reservas</div>
+      <div>
+        <h2>Asegurá tu <span class="it">butaca</span>.</h2>
+        <p class="lead">Cupo limitado a 100 asistentes. Las reservas abren en las próximas semanas — dejá tu contacto y te avisamos apenas se habilite el formulario.</p>
+      </div>
+    </div>
+
+    <div class="reservas-grid">
+      <div class="reserva-card">
+        <div class="reserva-kicker">acceso general</div>
+        <div class="reserva-price">Aporte simbólico</div>
+        <ul class="reserva-list">
+          <li>Entrada al auditorio central</li>
+          <li>Festival de ideas en los patios</li>
+          <li>Kit del asistente + café</li>
+        </ul>
+        <a href="#apply" class="btn primary">Avisame cuando abran <span class="arr">→</span></a>
+      </div>
+      <div class="reserva-card">
+        <div class="reserva-kicker">estudiantes UC</div>
+        <div class="reserva-price">Tarifa reducida</div>
+        <ul class="reserva-list">
+          <li>Presentando carnet vigente</li>
+          <li>Cupo prioritario de sala</li>
+          <li>Acceso completo al programa</li>
+        </ul>
+        <a href="#apply" class="btn ghost">Avisame cuando abran <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA — postulaciones (oradores + voluntarios) -->
 <div class="cta-band" id="apply">
   <img class="bg-mark" src="nanduti.svg" alt="" />
   <div class="wrap">
-    <div class="lead">Apoyá la primera edición</div>
-    <h3>Si tenés una <span class="it">idea</span>, un oficio, o una marca que cree en esto — este es tu lugar.</h3>
+    <div class="lead">Sumate a la primera edición</div>
+    <h3>Si tenés una <span class="it">idea</span>, o querés ser parte del equipo detrás — este es tu lugar.</h3>
 
     <div class="two">
-      <a href="#" class="cta-card">
-        <h4>01 · postulante</h4>
-        <p class="t">Postulate como orador, artista o voluntario</p>
-        <p class="d">Convocatoria abierta para oradores, performers y el equipo de producción. Acompañamos el proceso con coaches.</p>
-        <span class="go">Abrir formulario →</span>
+      <a [href]="formOradores" target="_blank" rel="noopener" class="cta-card">
+        <h4>01 · oradores</h4>
+        <p class="t">Postulate como orador o performer</p>
+        <p class="d">Convocatoria abierta a charlas de hasta 18 minutos. Acompañamos el proceso con coaches de contenido y ensayos.</p>
+        <span class="go">Abrir formulario de oradores →</span>
       </a>
-      <a href="#" class="cta-card">
-        <h4>02 · aliado</h4>
-        <p class="t">Sumate como patrocinador o aliado estratégico</p>
-        <p class="d">Empresas, organismos y medios que quieran formar parte del primer TEDx universitario de Paraguay.</p>
-        <span class="go">Descargar dossier →</span>
+      <a [href]="formVoluntarios" target="_blank" rel="noopener" class="cta-card">
+        <h4>02 · voluntarios</h4>
+        <p class="t">Sumate al equipo de producción</p>
+        <p class="d">Buscamos voluntarios para producción, logística, comunicación y festival de ideas. Experiencia formativa real.</p>
+        <span class="go">Abrir formulario de voluntarios →</span>
       </a>
     </div>
   </div>
@@ -234,7 +157,7 @@
 <section>
   <div class="wrap">
     <div class="s-head">
-      <div class="idx">05 / detalles</div>
+      <div class="idx">04 / detalles</div>
       <div>
         <h2>Información <span class="it">práctica</span>.</h2>
       </div>
@@ -247,20 +170,3 @@
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="fw">
-    <div class="logo-s">
-      <img src="nanduti.svg" alt="" />
-      <span>TEDx<span class="x">UC</span> Asunción</span>
-    </div>
-    <div class="social">
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">YouTube</a>
-      <a href="mailto:tedxuc@uc.edu.py">Contacto</a>
-    </div>
-    <div class="copy">© 2026 · organizado bajo licencia oficial TEDx</div>
-  </div>
-</footer>

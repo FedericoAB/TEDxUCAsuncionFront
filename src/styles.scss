@@ -3,12 +3,21 @@
   --ink: #f6f2ea;
   --muted: #a9a49a;
   --line: #23201c;
-  --red: #e11d1d;
-  --red-soft: #ff2727;
+
+  /* TED brand red (oficial, según guía de marca TED) */
+  --red: #EB0028;
+  --red-soft: #ff2e49;
+  --red-dark: #b5001f;
+
   --ember: #ff6a3d;
   --cream: #efe6d4;
   --sand: #1a1714;
   --grid: rgba(246, 242, 234, 0.06);
+
+  /* Fuentes del diseño original */
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 * {
@@ -21,7 +30,7 @@ html,
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-sans);
   font-feature-settings: "ss01", "ss02";
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -43,12 +52,12 @@ a {
 }
 
 .serif {
-  font-family: 'Fraunces', serif;
+  font-family: var(--font-display);
   font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 1;
 }
 
 .mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   letter-spacing: .02em;
 }
 
@@ -56,3 +65,92 @@ a {
   text-transform: uppercase;
   letter-spacing: .14em;
 }
+
+/* ─────────────────────────────────────────────────────────
+   Estilos compartidos entre páginas (landing + secciones
+   separadas). Componentes con ViewEncapsulation por defecto
+   no podrían estilar selectores globales, por eso viven acá.
+   ───────────────────────────────────────────────────────── */
+
+section {
+  position: relative;
+  z-index: 1;
+  padding: 100px 28px;
+  border-top: 1px solid var(--line);
+}
+
+.wrap { max-width: 1320px; margin: 0 auto; }
+
+.s-head {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 48px;
+
+  .idx {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .24em;
+    padding-top: 10px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(36px, 5.4vw, 72px);
+    line-height: 1;
+    letter-spacing: -.02em;
+    .it { font-style: italic; color: var(--red); }
+  }
+
+  p.lead {
+    grid-column: 2;
+    margin-top: 18px;
+    max-width: 640px;
+    color: var(--muted);
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .s-head { grid-template-columns: 1fr; gap: 12px; }
+  .s-head p.lead { grid-column: 1; }
+}
+
+.btn {
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  transition: transform .2s, background .2s, color .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+
+  &.primary {
+    background: var(--red);
+    color: #fff;
+    &:hover { background: var(--red-soft); transform: translateY(-2px); }
+  }
+  &.ghost {
+    border: 1px solid rgba(246, 242, 234, .4);
+    color: var(--ink);
+    background: transparent;
+    &:hover { border-color: var(--ink); background: var(--ink); color: var(--bg); }
+  }
+
+  .arr { display: inline-block; transition: transform .2s; }
+  &:hover .arr { transform: translateX(4px); }
+}
+
+/* Espacio superior para que el nav fijo no tape el contenido
+   de cada página (excepto el landing, que tiene hero full-viewport) */
+.page-pad { padding-top: 120px; }
+

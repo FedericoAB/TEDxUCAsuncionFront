@@ -1,0 +1,59 @@
+<header class="sp-hero page-pad">
+  <div class="wrap">
+    <div class="kicker">// oradores</div>
+    <h1>Las <span class="it">voces</span><br />de la primera edición.</h1>
+    <p class="sub">
+      El criterio curatorial es el mismo del formato original: la relevancia está en la idea, no en la trayectoria.
+    </p>
+  </div>
+</header>
+
+<!-- Placeholder (mientras no haya oradores confirmados) -->
+<section *ngIf="speakers.length === 0">
+  <div class="wrap">
+    <div class="speakers-soon">
+      <img class="soon-mark" src="nanduti.svg" alt="" />
+      <div class="soon-copy">
+        <div class="soon-kicker">próximamente</div>
+        <h3>Los <span class="it">oradores</span> se anuncian pronto.</h3>
+        <p>
+          Estamos cerrando la curaduría de la primera edición. Si tenés una idea que merece difundirse, postulate — acompañamos el proceso con coaches de contenido y ensayos.
+        </p>
+        <a [href]="formOradores" target="_blank" rel="noopener" class="btn primary">
+          Postular como orador <span class="arr">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Grilla (cuando hay al menos 1 orador confirmado) -->
+<section *ngIf="speakers.length > 0">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="idx">// {{ speakers.length }} confirmado(s)</div>
+      <div>
+        <h2>Lineup de <span class="it">TEDxUC Asunción</span>.</h2>
+        <p class="lead">
+          Seguiremos anunciando nombres en las próximas semanas.
+        </p>
+      </div>
+    </div>
+
+    <div class="speakers-grid">
+      <div class="sp" *ngFor="let sp of speakers; let i = index">
+        <div class="ph">
+          <div class="idx">// {{ (i + 1).toString().padStart(2, '0') }}</div>
+          <img class="petal" src="nanduti.svg" alt="" />
+          <div class="tag">foto próximamente</div>
+        </div>
+        <div class="body">
+          <div class="line">periferia · {{ sp.line }}</div>
+          <h5>{{ sp.n }}</h5>
+          <div class="role">{{ sp.r }}</div>
+          <div class="topic">{{ sp.t }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

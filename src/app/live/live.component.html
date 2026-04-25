@@ -1,0 +1,65 @@
+<header class="live-hero page-pad">
+  <div class="wrap">
+    <div class="kicker">// ver en vivo</div>
+    <h1>1 de <span class="it">agosto</span>, 2026<br />en directo.</h1>
+    <p class="sub">
+      La transmisión oficial de TEDxUC Asunción se publicará en nuestro canal de YouTube. Activá el recordatorio para no perderte el arranque.
+    </p>
+  </div>
+</header>
+
+<!-- Countdown -->
+<section class="count-band" id="countdown">
+  <div class="count-inner">
+    <div>
+      <div class="count-label">cuenta regresiva · live</div>
+      <div class="count-date">1 <span class="it">ago</span> 2026</div>
+      <div class="count-where">
+        <b>Universidad Católica "Nuestra Señora de la Asunción"</b> · Campus Santa Librada, Asunción — Auditorio Central + Festival de Ideas.
+      </div>
+    </div>
+    <div class="clock" aria-live="polite">
+      <div class="cell"><div class="n">{{ days }}</div><div class="l">días</div></div>
+      <div class="cell"><div class="n">{{ hours }}</div><div class="l">horas</div></div>
+      <div class="cell"><div class="n">{{ mins }}</div><div class="l">min</div></div>
+      <div class="cell"><div class="n">{{ secs }}</div><div class="l">seg</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Player -->
+<section>
+  <div class="wrap">
+    <div class="s-head">
+      <div class="idx">// transmisión</div>
+      <div>
+        <h2>Reproductor <span class="it">oficial</span>.</h2>
+        <p class="lead">
+          Cuando arranque el evento, este reproductor va a pasar al stream en vivo. Hasta entonces mostramos una playlist curada de TEDTalks.
+        </p>
+      </div>
+    </div>
+
+    <div class="player">
+      <div class="player-frame">
+        <iframe
+          [src]="youtubeEmbed"
+          title="TEDxUC Asunción — reproductor de YouTube"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="player-meta">
+        <div class="live-dot-wrap">
+          <span class="live-dot"></span>
+          <span class="live-label">Aún no estamos al aire</span>
+        </div>
+        <a [href]="youtubeChannel" target="_blank" rel="noopener" class="btn ghost">
+          Abrir canal en YouTube <span class="arr">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,176 @@
+:host { display: block; position: relative; z-index: 1; }
+
+.sp-hero {
+  padding: 140px 28px 60px;
+
+  .wrap { max-width: 1120px; margin: 0 auto; }
+
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(50px, 9vw, 128px);
+    line-height: .92;
+    letter-spacing: -.03em;
+    margin-bottom: 28px;
+
+    .it { font-style: italic; color: var(--red); }
+  }
+
+  .sub { font-size: 19px; color: var(--muted); max-width: 640px; }
+}
+
+/* Próximamente */
+.speakers-soon {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 56px 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    radial-gradient(ellipse at 0% 50%, rgba(235, 0, 40, .10), transparent 55%),
+    rgba(255, 255, 255, .015);
+
+  .soon-mark {
+    width: 200px;
+    height: 200px;
+    opacity: .85;
+    animation: spin 38s linear infinite;
+    filter: drop-shadow(0 0 50px rgba(235, 0, 40, .35));
+  }
+
+  .soon-kicker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(32px, 4.4vw, 56px);
+    line-height: 1;
+    letter-spacing: -.02em;
+    margin-bottom: 16px;
+    .it { font-style: italic; color: var(--red); }
+  }
+
+  p {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 58ch;
+    margin-bottom: 26px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 780px) {
+  .speakers-soon {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+    padding: 40px 24px;
+    .soon-mark { width: 140px; height: 140px; margin: 0 auto; }
+    p { margin-left: auto; margin-right: auto; }
+  }
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Grilla (formato original del landing) */
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1100px) { .speakers-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 780px)  { .speakers-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px)  { .speakers-grid { grid-template-columns: 1fr; } }
+
+.sp {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .015);
+  transition: transform .3s, border-color .3s;
+  cursor: pointer;
+
+  &:hover { transform: translateY(-4px); border-color: var(--red); }
+
+  .ph {
+    aspect-ratio: 3/4;
+    background:
+      repeating-linear-gradient(135deg, rgba(246, 242, 234, .05) 0 12px, rgba(246, 242, 234, .02) 12px 24px),
+      linear-gradient(180deg, #1a1714, #0e0c0a);
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .22em;
+    }
+    .idx {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--red);
+    }
+    .petal {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      opacity: .5;
+      bottom: 14px;
+      right: 14px;
+      animation: spin 24s linear infinite;
+    }
+  }
+
+  .body {
+    padding: 18px 18px 22px;
+
+    .line {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      margin-bottom: 8px;
+    }
+    h5 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .role { font-size: 13px; color: var(--muted); }
+    .topic {
+      margin-top: 12px;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--ember);
+      line-height: 1.3;
+    }
+  }
+}
