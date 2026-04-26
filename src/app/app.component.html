@@ -14,8 +14,8 @@
 </div>
 
 <!-- App bar: sólo links a páginas aparte del landing -->
-<nav class="top">
-  <a routerLink="/" class="brand" aria-label="Ir al inicio">
+<nav class="top" [class.menu-open]="menuOpen">
+  <a routerLink="/" class="brand" aria-label="Ir al inicio" (click)="closeMenu()">
     <img class="brand-mark" src="nanduti.svg" alt="" />
     <span>TEDx<i>UC</i> Asunción</span>
   </a>
@@ -28,7 +28,33 @@
   </div>
 
   <a routerLink="/ver-en-vivo" class="cta">Ver en vivo</a>
+
+  <!-- Toggle hamburguesa (sólo mobile) -->
+  <button
+    type="button"
+    class="menu-toggle"
+    [attr.aria-expanded]="menuOpen"
+    aria-controls="mobile-menu"
+    aria-label="Abrir menú"
+    (click)="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 </nav>
+
+<!-- Panel mobile (se abre con la hamburguesa) -->
+<div
+  id="mobile-menu"
+  class="mobile-menu"
+  [class.open]="menuOpen"
+  [attr.aria-hidden]="!menuOpen">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Inicio</a>
+  <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">Concepto</a>
+  <a routerLink="/oradores" routerLinkActive="active" (click)="closeMenu()">Oradores</a>
+  <a routerLink="/ver-en-vivo" routerLinkActive="active" (click)="closeMenu()">Ver en vivo</a>
+  <a routerLink="/sponsors" routerLinkActive="active" (click)="closeMenu()">Sponsors</a>
+</div>
 
 <!-- Contenido de cada ruta -->
 <main>
@@ -52,13 +78,15 @@
     </nav>
 
     <div class="social">
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">YouTube</a>
+      <a [href]="instagramUrl" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">YouTube</a>
       <a href="mailto:tedxuc@uc.edu.py">Contacto</a>
     </div>
 
-    <p class="license">This independent TEDx event is operated under license from TED.</p>
-    <div class="copy">© 2026 · TEDxUC Asunción</div>
+    <div class="legal">
+      <p class="license">This independent TEDx event is operated under license from TED.</p>
+      <p class="copy">© 2026 · TEDxUC Asunción</p>
+    </div>
   </div>
 </footer>

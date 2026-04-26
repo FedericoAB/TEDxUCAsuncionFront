@@ -523,6 +523,30 @@
 @media (max-width: 800px) { .faq { grid-template-columns: 1fr; } }
 
 /* Responsive tweaks */
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .orbit { display: none; }
+
+  /* Las esquinas de hero se apilan feo en mobile y chocan con el scroll-hint.
+     Las ocultamos: el contenido (fecha, lugar) ya está en la propia hero. */
+  .corner.bl,
+  .corner.br { display: none; }
+
+  .corner.tl,
+  .corner.tr {
+    top: 80px;
+    font-size: 10px;
+    letter-spacing: .14em;
+  }
+  .corner.tl { left: 16px; }
+  .corner.tr { right: 16px; }
+
+  .scroll-hint {
+    bottom: 16px;
+    font-size: 10px;
+    letter-spacing: .22em;
+  }
+
+  .hero {
+    padding: 110px 18px 70px;
+  }
 }

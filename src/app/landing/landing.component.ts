@@ -8,6 +8,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 interface Slot {
   time: string;
@@ -21,7 +22,7 @@ interface Slot {
 @Component({
   standalone: true,
   selector: 'app-landing',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],
 })
@@ -42,7 +43,7 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
   readonly formVoluntarios = 'https://forms.gle/icSho1WVDo6F8as5A';
 
   schedule: Slot[] = [
-    { time: '14:00', title: 'Acreditación & Festival', italic: 'de Ideas', kind: 'open', kindClass: '', desc: 'Recepción, kit del asistente, exhibiciones artísticas e intervenciones en los patios contiguos al auditorio.' },
+    { time: '14:00', title: 'Acreditación & Festival', italic: 'de Ideas', kind: 'open', kindClass: '', desc: 'Recepción, kit del asistente, exhibiciones artísticas e intervenciones al aire libre sobre la costanera.' },
     { time: '15:00', title: 'Apertura ·', italic: 'Ñandutí', kind: 'performance', kindClass: 'perf', desc: 'Bienvenida del equipo curatorial y performance inaugural — un preludio sonoro tejido entre guaraní y español.' },
     { time: '15:20', title: 'Bloque I ·', italic: 'Periferias geográficas', kind: '3 charlas', kindClass: 'talk', desc: 'Ideas que nacen en los bordes del mapa y redibujan lo que consideramos centro.' },
     { time: '16:40', title: 'Intermedio & café', kind: 'pausa', kindClass: 'break', desc: 'Recorrido por el festival de ideas, networking, degustación local.' },
@@ -50,7 +51,7 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
     { time: '18:30', title: 'Intervalo artístico', kind: 'performance', kindClass: 'perf', desc: 'Invitación sonora y visual — un respiro entre bloques.' },
     { time: '19:00', title: 'Bloque III ·', italic: 'Periferias existenciales & culturales', kind: '3–4 charlas', kindClass: 'talk', desc: 'Identidad, lengua, memoria y las formas en que habitamos lo incierto.' },
     { time: '20:30', title: 'Cierre & brindis', kind: 'open', kindClass: '', desc: 'Conversación informal con oradores, equipo y asistentes. Registro de testimonios.' },
-    { time: '21:00', title: 'Festival', italic: 'hasta tarde', kind: 'open', kindClass: '', desc: 'Los espacios complementarios permanecen abiertos en el campus.' },
+    { time: '21:00', title: 'Festival', italic: 'hasta tarde', kind: 'open', kindClass: '', desc: 'Los espacios complementarios del puerto permanecen abiertos sobre la costanera.' },
   ];
 
   periferias = [
@@ -62,7 +63,7 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
 
   faqs = [
     { q: '¿Quién puede asistir?', a: 'El evento es abierto al público con inscripción previa. Prioridad para estudiantes universitarios, jóvenes profesionales y comunidad académica.' },
-    { q: '¿Dónde es exactamente?', a: 'Campus Santa Librada, Universidad Católica "Nuestra Señora de la Asunción". Auditorio central + patios para el festival de ideas.' },
+    { q: '¿Dónde es exactamente?', a: 'Puerto de Asunción — sobre la costanera, frente al río Paraguay. Escenario principal + festival de ideas en los espacios al aire libre del puerto.' },
     { q: '¿En qué idioma son las charlas?', a: 'Principalmente en español, con intervenciones en guaraní. Las charlas se publican luego con subtítulos en los canales oficiales.' },
     { q: '¿Cómo se seleccionan las ideas?', a: 'A través de un proceso curatorial con convocatoria abierta, búsqueda directa y desarrollo guiado junto a coaches de contenido.' },
     { q: '¿Se transmite en vivo?', a: 'Sí — la transmisión oficial se publica en la sección "Ver en vivo". Las charlas también se graban y publican posteriormente en los canales oficiales de TED y TEDx.' },
