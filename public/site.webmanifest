@@ -1,0 +1,13 @@
+{
+  "name": "TEDxUC Asunción",
+  "short_name": "TEDxUC",
+  "description": "Primera edición universitaria de TEDx en Paraguay — 1 ago 2026, Puerto de Asunción.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0a08",
+  "theme_color": "#0b0a08",
+  "icons": [
+    { "src": "favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
