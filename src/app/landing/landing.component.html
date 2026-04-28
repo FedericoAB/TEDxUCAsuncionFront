@@ -1,10 +1,11 @@
-<!-- HERO -->
+<!-- HERO — izquierda: ñandutí · derecha: título + CTAs -->
 <header class="hero">
   <div class="corner tl">TEDxUC · ASU<br />1ra edición</div>
-  <div class="corner tr">lic. TEDx · independiente<br />Universidad Católica</div>
+  <div class="corner tr">lic. TEDx · independiente<br />UC Asunción</div>
   <div class="corner bl">Puerto de Asunción · PY</div>
   <div class="corner br">01.ago.2026 / 15:00–21:00</div>
 
+  <!-- Columna izquierda: animación ñandutí -->
   <div class="mark-wrap">
     <div class="ring"></div>
     <div class="ring r2"></div>
@@ -17,7 +18,8 @@
     </div>
   </div>
 
-  <div class="hero-title">
+  <!-- Columna derecha: texto + botones -->
+  <div class="hero-right">
     <div class="eyebrow">1 · Agosto · 2026 // Asunción, Paraguay</div>
     <h1>
       <span class="line l1"><b>Explorando</b></span>
@@ -28,8 +30,18 @@
     </p>
 
     <div class="hero-cta">
-      <a href="#reservas" class="btn primary">Reservar acceso <span class="arr">→</span></a>
-      <a routerLink="/ver-en-vivo" class="btn ghost">Ver en vivo <span class="arr">→</span></a>
+      <!-- Reservas: deshabilitado hasta que abran -->
+      <button type="button" class="btn primary btn-soon" disabled>
+        Reservar entrada — próximamente
+      </button>
+      <!-- Ver en vivo: activo -->
+      <a routerLink="/ver-en-vivo" class="btn ghost">
+        Ver en vivo <span class="arr">→</span>
+      </a>
+      <!-- Donar: nuevo, deshabilitado por ahora -->
+      <button type="button" class="btn ghost btn-donar" disabled>
+        Donar — próximamente
+      </button>
     </div>
   </div>
 
@@ -39,7 +51,7 @@
 <!-- META STRIP -->
 <div class="meta">
   <div class="cell"><div class="n">1</div><div class="l">día · 1 ago 2026</div></div>
-  <div class="cell"><div class="n">7<span class="it">–</span>10</div><div class="l">charlas + performances</div></div>
+  <div class="cell"><div class="n">7–10</div><div class="l">charlas + performances</div></div>
   <div class="cell"><div class="n">100</div><div class="l">butacas en sala</div></div>
   <div class="cell"><div class="n">6h</div><div class="l">15:00 · 21:00</div></div>
 </div>
@@ -50,7 +62,7 @@
     <div class="s-head">
       <div class="idx">01 / hilo conductor</div>
       <div>
-        <h2>Cuatro <span class="it">periferias</span>,<br />un mosaico.</h2>
+        <h2>Cuatro periferias,<br />un mosaico.</h2>
         <p class="lead">La periferia no es un lugar geográfico: es una posición. Desde los márgenes emergen nuevas formas de ver lo común. Estas cuatro dimensiones orientan la curaduría.</p>
       </div>
     </div>
@@ -73,8 +85,8 @@
     <div class="s-head">
       <div class="idx">02 / programa · 1 ago 2026</div>
       <div>
-        <h2>Un <span class="it">día</span>,<br />seis horas de ideas.</h2>
-        <p class="lead">Tres bloques de charlas, dos performances, un festival de ideas abierto al campus. 15:00 a 21:00 — un solo día, un solo escenario central.</p>
+        <h2>Un día,<br />seis horas de ideas.</h2>
+        <p class="lead">Tres bloques de charlas, dos performances, un festival de ideas. 15:00 a 21:00 — un solo día, un solo escenario.</p>
       </div>
     </div>
 
@@ -83,7 +95,7 @@
         <div class="slot">
           <div class="time">{{ s.time }}</div>
           <div class="evt">
-            <h6>{{ s.title }} <span class="it" *ngIf="s.italic">{{ s.italic }}</span></h6>
+            <h6>{{ s.title }} <em *ngIf="s.italic">{{ s.italic }}</em></h6>
             <span class="kind" [class.talk]="s.kindClass==='talk'" [class.perf]="s.kindClass==='perf'" [class.break]="s.kindClass==='break'">{{ s.kind }}</span>
             <div class="desc">{{ s.desc }}</div>
           </div>
@@ -99,31 +111,21 @@
     <div class="s-head">
       <div class="idx">03 / reservas</div>
       <div>
-        <h2>Asegurá tu <span class="it">butaca</span>.</h2>
-        <p class="lead">Cupo limitado a 100 asistentes. Las reservas abren en las próximas semanas — dejá tu contacto y te avisamos apenas se habilite el formulario.</p>
+        <h2>Asegurá tu butaca.</h2>
+        <p class="lead">Cupo limitado a 100 asistentes. Las entradas abrirán en las próximas semanas.</p>
       </div>
     </div>
 
-    <div class="reservas-grid">
+    <div class="reservas-single">
       <div class="reserva-card">
-        <div class="reserva-kicker">acceso general</div>
-        <div class="reserva-price">Aporte simbólico</div>
+        <div class="reserva-kicker">acceso general · todo público</div>
+        <div class="reserva-price">Precio y fecha de lanzamiento por anunciar</div>
         <ul class="reserva-list">
-          <li>Entrada al auditorio central</li>
-          <li>Festival de ideas en los patios</li>
+          <li>Entrada al escenario principal</li>
+          <li>Festival de ideas en el puerto</li>
           <li>Kit del asistente + café</li>
         </ul>
-        <a href="#apply" class="btn primary">Avisame cuando abran <span class="arr">→</span></a>
-      </div>
-      <div class="reserva-card">
-        <div class="reserva-kicker">estudiantes UC</div>
-        <div class="reserva-price">Tarifa reducida</div>
-        <ul class="reserva-list">
-          <li>Presentando carnet vigente</li>
-          <li>Cupo prioritario de sala</li>
-          <li>Acceso completo al programa</li>
-        </ul>
-        <a href="#apply" class="btn ghost">Avisame cuando abran <span class="arr">→</span></a>
+        <div class="reserva-soon">Próximamente podrás comprar entradas por aquí</div>
       </div>
     </div>
   </div>
@@ -134,7 +136,7 @@
   <img class="bg-mark" src="nanduti.svg" alt="" />
   <div class="wrap">
     <div class="lead">Sumate a la primera edición</div>
-    <h3>Si tenés una <span class="it">idea</span>, o querés ser parte del equipo detrás — este es tu lugar.</h3>
+    <h3>Si tenés una <em>idea</em>, o querés ser parte del equipo detrás — este es tu lugar.</h3>
 
     <div class="two">
       <a [href]="formOradores" target="_blank" rel="noopener" class="cta-card">
@@ -159,7 +161,7 @@
     <div class="s-head">
       <div class="idx">04 / detalles</div>
       <div>
-        <h2>Información <span class="it">práctica</span>.</h2>
+        <h2>Información práctica.</h2>
       </div>
     </div>
   </div>

@@ -103,7 +103,8 @@ section {
     font-size: clamp(36px, 5.4vw, 72px);
     line-height: 1;
     letter-spacing: -.02em;
-    .it { font-style: italic; color: var(--red); }
+    /* Acento en cursiva sin rojo — más legible en títulos de sección */
+    .it { font-style: italic; color: var(--ink); }
   }
 
   p.lead {

@@ -67,7 +67,7 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
     { q: '¿En qué idioma son las charlas?', a: 'Principalmente en español, con intervenciones en guaraní. Las charlas se publican luego con subtítulos en los canales oficiales.' },
     { q: '¿Cómo se seleccionan las ideas?', a: 'A través de un proceso curatorial con convocatoria abierta, búsqueda directa y desarrollo guiado junto a coaches de contenido.' },
     { q: '¿Se transmite en vivo?', a: 'Sí — la transmisión oficial se publica en la sección "Ver en vivo". Las charlas también se graban y publican posteriormente en los canales oficiales de TED y TEDx.' },
-    { q: '¿Cuál es el costo?', a: 'Acceso con aporte simbólico para asistentes generales y tarifa reducida para estudiantes UC. Cupo limitado a 100 butacas.' },
+    { q: '¿Cuál es el costo?', a: 'Entrada a precio único para todo público. El precio y la fecha de lanzamiento de venta se anunciarán próximamente. Cupo limitado a 100 butacas.' },
   ];
 
   private rafId = 0;
