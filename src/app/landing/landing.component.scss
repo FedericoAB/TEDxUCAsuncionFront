@@ -444,7 +444,7 @@
     right: -120px;
     top: 50%;
     transform: translateY(-50%);
-    opacity: .14;
+    opacity: .54;
     width: 720px;
     height: 720px;
     animation: spin 90s linear infinite;
@@ -481,14 +481,14 @@
 @media (max-width: 700px) { .cta-band .two { grid-template-columns: 1fr; } }
 
 .cta-card {
-  background: rgba(0, 0, 0, .15);
+  background: rgba(0, 0, 0, .55);
   border: 1px solid rgba(255, 255, 255, .2);
   padding: 28px;
   border-radius: 6px;
   transition: background .25s;
   display: block;
 
-  &:hover { background: rgba(0, 0, 0, .3); }
+  &:hover { background: rgba(0, 0, 0, .8); }
 
   h4 {
     font-family: var(--font-mono);
