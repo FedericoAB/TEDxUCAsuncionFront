@@ -21,8 +21,8 @@
   </a>
 
   <div class="links">
-    <a routerLink="/about" routerLinkActive="active">Concepto</a>
-    <a routerLink="/oradores" routerLinkActive="active">Oradores</a>
+    <a routerLink="/about" routerLinkActive="active">Qué es TEDx</a>
+    <a routerLink="/oradores" routerLinkActive="active">Ver Oradores</a>
     <a routerLink="/ver-en-vivo" routerLinkActive="active">Ver en vivo</a>
     <a routerLink="/sponsors" routerLinkActive="active">Sponsors</a>
   </div>
@@ -50,8 +50,8 @@
   [class.open]="menuOpen"
   [attr.aria-hidden]="!menuOpen">
   <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Inicio</a>
-  <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">Concepto</a>
-  <a routerLink="/oradores" routerLinkActive="active" (click)="closeMenu()">Oradores</a>
+  <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">Qué es TEDx</a>
+  <a routerLink="/oradores" routerLinkActive="active" (click)="closeMenu()">Ver Oradores</a>
   <a routerLink="/ver-en-vivo" routerLinkActive="active" (click)="closeMenu()">Ver en vivo</a>
   <a routerLink="/sponsors" routerLinkActive="active" (click)="closeMenu()">Sponsors</a>
 </div>
@@ -70,8 +70,8 @@
     </a>
 
     <nav class="footer-nav" aria-label="Footer">
-      <a routerLink="/about">Concepto</a>
-      <a routerLink="/oradores">Oradores</a>
+      <a routerLink="/about">Qué es TEDx</a>
+      <a routerLink="/oradores">Ver Oradores</a>
       <a routerLink="/ver-en-vivo">Ver en vivo</a>
       <a routerLink="/sponsors">Sponsors</a>
       <a [href]="tedxProgramLink" target="_blank" rel="noopener">Programa TEDx ↗</a>

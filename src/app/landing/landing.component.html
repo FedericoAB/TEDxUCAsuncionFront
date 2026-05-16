@@ -1,9 +1,11 @@
-<!-- HERO — izquierda: ñandutí · derecha: título + CTAs -->
-<header class="hero">
-  <div class="corner tl">TEDxUC · ASU<br />1ra edición</div>
+<!-- HERO — izquierda: ñandutí · derecha: título + CTAs 
+   <div class="corner tl">TEDxUC · ASU<br />1ra edición</div>
   <div class="corner tr">lic. TEDx · independiente<br />UC Asunción</div>
-  <div class="corner bl">Puerto de Asunción · PY</div>
-  <div class="corner br">01.ago.2026 / 15:00–21:00</div>
+    <div class="corner bl">Puerto de Asunción · PY</div>
+  <div class="corner br">01.ago.2026 / 15:00–21:00</div>-->
+<header class="hero">
+
+
 
   <!-- Columna izquierda: animación ñandutí -->
   <div class="mark-wrap">
@@ -20,7 +22,7 @@
 
   <!-- Columna derecha: texto + botones -->
   <div class="hero-right">
-    <div class="eyebrow">1 · Agosto · 2026 // Asunción, Paraguay</div>
+    <div class="eyebrow">Puerto de Asunción, Paraguay</div>
     <h1>
       <span class="line l1"><b>Explorando</b></span>
       <span class="line l2"><b>las <span class="it">periferias</span>.</b></span>
@@ -34,10 +36,16 @@
       <button type="button" class="btn primary btn-soon" disabled>
         Reservar entrada — próximamente
       </button>
-      <!-- Ver en vivo: activo -->
-      <a routerLink="/ver-en-vivo" class="btn ghost">
-        Ver en vivo <span class="arr">→</span>
+      <a [href]="formOradores" target="_blank" rel="noopener" class="btn ghost">
+        Quiero ser orador <span class="arr">→</span>
       </a>
+      <a [href]="formVoluntarios" target="_blank" rel="noopener" class="btn ghost">
+        Quiero ser voluntario <span class="arr">→</span>
+      </a>
+      <!-- Ver en vivo: activo <a routerLink="/ver-en-vivo" class="btn ghost">
+        Ver en vivo <span class="arr">→</span>
+      </a>-->
+      
       <!-- Donar: nuevo, deshabilitado por ahora -->
       <button type="button" class="btn ghost btn-donar" disabled>
         Donar — próximamente
@@ -48,13 +56,13 @@
   <div class="scroll-hint">scroll · explorar periferias</div>
 </header>
 
-<!-- META STRIP -->
+<!-- META STRIP 
 <div class="meta">
   <div class="cell"><div class="n">1</div><div class="l">día · 1 ago 2026</div></div>
   <div class="cell"><div class="n">7–10</div><div class="l">charlas + performances</div></div>
   <div class="cell"><div class="n">100</div><div class="l">butacas en sala</div></div>
   <div class="cell"><div class="n">6h</div><div class="l">15:00 · 21:00</div></div>
-</div>
+</div>-->
 
 <!-- PERIFERIAS -->
 <section>
