@@ -15,9 +15,9 @@
   --grid: rgba(246, 242, 234, 0.06);
 
   /* Fuentes del diseño original */
-  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  --font-mono: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
 }
 
 * {
@@ -31,7 +31,8 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
-  font-feature-settings: "ss01", "ss02";
+  font-weight: 400;
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -51,10 +52,7 @@ a {
   color: #fff;
 }
 
-.serif {
-  font-family: var(--font-display);
-  font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 1;
-}
+.serif { font-family: var(--font-display); }
 
 .mono {
   font-family: var(--font-mono);
@@ -99,7 +97,7 @@ section {
 
   h2 {
     font-family: var(--font-display);
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(36px, 5.4vw, 72px);
     line-height: 1;
     letter-spacing: -.02em;
@@ -154,4 +152,3 @@ section {
 /* Espacio superior para que el nav fijo no tape el contenido
    de cada página (excepto el landing, que tiene hero full-viewport) */
 .page-pad { padding-top: 120px; }
-

@@ -78,15 +78,15 @@ nav.top {
   backdrop-filter: blur(6px);
 
   .brand {
-    display: flex; align-items: center; gap: 12px;
-    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
 
-    .brand-mark {
-      width: 32px; height: 32px;
-      animation: spin 40s linear infinite;
+    .brand-logo {
+      display: block;
+      width: 212px;
+      height: auto;
     }
-
-    i { color: var(--red); font-style: italic; font-weight: 700; }
   }
 
   .links {
@@ -212,8 +212,8 @@ nav.top {
     .cta { display: none; }
     .menu-toggle { display: block; }
 
-    .brand { font-size: 14px; gap: 10px;
-      .brand-mark { width: 28px; height: 28px; }
+    .brand {
+      .brand-logo { width: 164px; }
     }
   }
 }
@@ -238,16 +238,14 @@ footer {
   .logo-s {
     grid-row: 1;
     grid-column: 1;
-    display: flex; align-items: center; gap: 12px;
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
 
     img {
-      width: 40px; height: 40px;
-      animation: spin 50s linear infinite;
+      width: 256px;
+      height: auto;
     }
-    .x { color: var(--red); font-style: italic; }
   }
 
   .footer-nav {

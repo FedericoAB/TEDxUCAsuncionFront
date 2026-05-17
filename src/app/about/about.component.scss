@@ -37,15 +37,31 @@
   gap: 28px;
   max-width: 780px;
 
+  .brand-board {
+    margin: 0;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 8px;
+    background: #fff;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
   .official {
-    font-family: var(--font-display);
-    font-style: italic;
+    font-family: var(--font-sans);
+    font-weight: 300;
     font-size: clamp(20px, 2.4vw, 26px);
-    line-height: 1.35;
+    line-height: 1.45;
     color: var(--ink);
     padding: 24px 28px;
     border-left: 3px solid var(--red);
     background: rgba(235, 0, 40, .04);
+
+    b { font-weight: 600; }
   }
 
   .translation {
@@ -116,7 +132,7 @@
     }
     .big {
       font-family: var(--font-display);
-      font-weight: 400;
+      font-weight: 500;
       font-size: 28px;
       line-height: 1.1;
       letter-spacing: -.01em;

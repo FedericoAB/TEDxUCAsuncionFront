@@ -121,7 +121,7 @@
     grid-template-columns: repeat(3, 1fr);
 
     .sponsor-card .logo-slot {
-      height: 100px; /* vs brand-mark del nav = 32px. Este es texto, logos reales igual deben ir acotados. */
+      height: 100px; /* Siempre visualmente menor que el lockup oficial del evento. */
       font-size: 20px;
     }
   }

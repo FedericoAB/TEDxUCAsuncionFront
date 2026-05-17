@@ -54,10 +54,10 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
   ];
 
   periferias = [
-    { num: '01', h: 'Geográficas', p: 'Territorios que se piensan a sí mismos desde el borde del mapa — y desde ahí imaginan el centro.' },
-    { num: '02', h: 'Del conocimiento', p: 'Las fronteras entre disciplinas, donde lo que no tiene nombre todavía empieza a tener forma.' },
-    { num: '03', h: 'Existenciales', p: 'Los bordes de lo humano: identidad, cuerpo, tiempo, memoria y el modo en que habitamos lo incierto.' },
-    { num: '04', h: 'Culturales', p: 'Lengua, sonido, oficio, ritual. El bilingüismo guaraní–español como atmósfera y como argumento.' },
+    { num: '01', h: 'Del conocimiento', p: 'El conocimiento avanza cuando alguien se anima a preguntar lo que en su campo nadie estaba preguntando. Esas preguntas que se dan en las fronteras terminan cambiando el campo entero.' },
+    { num: '02', h: 'Existenciales', p: 'Toda persona, tarde o temprano, atraviesa una experiencia que la divide en un antes y un después. Lo que se aprende ahí es difícil de aprender de otra forma, y por eso vale la pena escucharlo.' },
+    { num: '03', h: 'Culturales', p: 'La cultura es lo que está pasando ahora mismo, en lugares donde muy pocos están mirando, en oficios y conversaciones que sostienen comunidades enteras.' },
+    { num: '04', h: 'De tu propia mirada', p: 'No hace falta venir de ningún margen para mirar desde uno. A veces basta con pararse en un ángulo donde nadie más se paró y observar algo común con atención real.' },
   ];
 
   faqs = [

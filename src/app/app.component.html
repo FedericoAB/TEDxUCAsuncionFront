@@ -16,15 +16,14 @@
 <!-- App bar: sólo links a páginas aparte del landing -->
 <nav class="top" [class.menu-open]="menuOpen">
   <a routerLink="/" class="brand" aria-label="Ir al inicio" (click)="closeMenu()">
-    <img class="brand-mark" src="nanduti.svg" alt="" />
-    <span>TEDx<i>UC</i> Asunción</span>
+    <img class="brand-logo" src="tedx-logo-white.png" alt="TEDxUC Asunción" />
   </a>
 
   <div class="links">
     <a routerLink="/about" routerLinkActive="active">Qué es TEDx</a>
     <a routerLink="/oradores" routerLinkActive="active">Ver Oradores</a>
     <a routerLink="/ver-en-vivo" routerLinkActive="active">Ver en vivo</a>
-    <a routerLink="/sponsors" routerLinkActive="active">Sponsors</a>
+    <a routerLink="/sponsors" routerLinkActive="active">Alianzas</a>
   </div>
 
   <a routerLink="/ver-en-vivo" class="cta">Ver en vivo</a>
@@ -65,8 +64,7 @@
 <footer>
   <div class="fw">
     <a routerLink="/" class="logo-s">
-      <img src="nanduti.svg" alt="" />
-      <span>TEDx<span class="x">UC</span> Asunción</span>
+      <img src="tedx-logo-white.png" alt="TEDxUC Asunción" />
     </a>
 
     <nav class="footer-nav" aria-label="Footer">
