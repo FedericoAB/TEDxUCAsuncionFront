@@ -16,7 +16,7 @@
 
   /* Fuentes del diseño original */
   --font-sans: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
-  --font-display: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
   --font-mono: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
 }
 
@@ -52,7 +52,10 @@ a {
   color: #fff;
 }
 
-.serif { font-family: var(--font-display); }
+.serif {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 1;
+}
 
 .mono {
   font-family: var(--font-mono);
@@ -97,7 +100,7 @@ section {
 
   h2 {
     font-family: var(--font-display);
-    font-weight: 400;
+    font-weight: 300;
     font-size: clamp(36px, 5.4vw, 72px);
     line-height: 1;
     letter-spacing: -.02em;
